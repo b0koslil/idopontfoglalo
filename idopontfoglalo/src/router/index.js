@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import IdopontfoglalasView from '../views/IdopontfoglalasView.vue'
+import IdopontokView from '../views/IdopontokView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -7,17 +7,17 @@ const router = createRouter({
     {
       path: '/',
       name: 'idopontfoglalas',
-      component: IdopontfoglalasView,
+      component: IdopontokView,
     },
     {
-      path: '/valaszt',
-      name: 'valaszt',
+      path: '/foglalasok',
+      name: 'foglalasok',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/ValasztView.vue'),
+      component: () => import('../views/FoglalasokView.vue'),
     }
-  ],
+  ]
 })
 
 export default router
